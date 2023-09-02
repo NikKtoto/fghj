@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3z80!n1^n8dsn84mff=k!1k%bp$8a(xrpktf)igt8umrdz*6hs'
+SECRET_KEY = 'django-insecure-%vs8+=3@uap=!#jip$rg$3*&s#q)@kx9%-zo1i&jg=(1lf^p@l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app_advertisment',
     'app_lesson_4',
+    'app_auth',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +127,6 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Media config
+# Media config
 MEDIA_URL = 'media/'
 MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media/')

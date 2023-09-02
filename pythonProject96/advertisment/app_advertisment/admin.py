@@ -1,9 +1,10 @@
 from django.contrib import admin
-from django.contrib import admin
 from .models import Advertisement
 
+# Register your models here.
 class AdvertisementAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'description', 'price', 'created_date', 'auction', 'updated_date', 'image']
+    list_display = ['id', 'title', 'description', 'price',
+                    'created_date', 'updated_date', 'auction', 'get_html_image']
     list_filter = ['auction', 'created_at']
     actions = ['make_auction_as_false', 'make_auction_as_true']
 
@@ -17,5 +18,3 @@ class AdvertisementAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Advertisement, AdvertisementAdmin)
-
-# Register your models here.
